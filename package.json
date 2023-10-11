@@ -1,0 +1,31 @@
+{
+  "name": "rentalize-sst",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "deploy": "AWS_PROFILE=villem-test sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "aws-cdk-lib": "2.95.1",
+    "constructs": "10.2.69",
+    "sst": "^2.26.10",
+    "sveltekit-adapter-aws": "^4.5.1",
+    "typescript": "^5.2.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.123",
+    "cheerio": "^1.0.0-rc.12",
+    "ioredis": "^5.3.2",
+    "node-fetch": "^3.3.2"
+  }
+}
